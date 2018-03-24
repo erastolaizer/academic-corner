@@ -1,0 +1,24 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div class="">
+</div>
+<div class="button-group">
+  <ion-row>
+<ion-col>
+<button ion-button color="primary" (click)="subjects(sub1_id,sub1,nameClass)" block>{{sub1}}</button>
+</ion-col>
+<ion-col>
+<button ion-button color="secondary" (click)="subjects(sub2_id,sub2,nameClass)"  block>{{sub2}}</button>
+</ion-col>
+<ion-col>
+<button ion-button color="back" (click)="subjects(sub3_id,sub3,nameClass)"  block>{{sub3}}</button>
+</ion-col>
+  </ion-row>
+</div>
+</ion-content>

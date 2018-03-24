@@ -1,0 +1,23 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+          <button ion-button menuToggle color="primary">
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>Discussions</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col col-8><ion-label color="danger"><b><h2>Questions</h2></b></ion-label></ion-col>
+    <ion-col col-4><ion-buttons right>
+          <button ion-button button-small color="primary" (click)="ask()">Ask</button>
+        </ion-buttons>
+      </ion-col>
+
+  </ion-row>
+<p *ngFor="let question of questions" (click)="viewAnswears(question.id,question.question_tag,question.question,loguser.name)">{{question.question_tag}}</p><hr>
+</ion-content>

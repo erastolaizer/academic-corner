@@ -1,0 +1,105 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Primary Schools</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p>Choose Your Class</p>
+  <ion-row>
+  <ion-col col-6>
+    <div class="dropdown" >
+    <button ion-button  round color="back" class="dropbtn"><pre>Class 1 <ion-icon name="arrow-dropdown-circle"></ion-icon></pre></button>
+    <ion-list class="dropdown-content" >
+      <ion-item *ngFor="let sub of sub1" (click)="subjects(sub.subject_id,sub.subject_name,sub.class_name)">
+    {{sub.subject_name}}
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-col>
+
+    <ion-col col-6>
+      <div class="dropdown" >
+      <button ion-button  round color="back" class="dropbtn"><pre>Class 2 <ion-icon name="arrow-dropdown-circle"></ion-icon></pre></button>
+      <ion-list class="dropdown-content" >
+        <ion-item *ngFor="let sub of sub2" (click)="subjects(sub.subject_id,sub.subject_name,sub.class_name)">
+      {{sub.subject_name}}
+        </ion-item>
+        </ion-list>
+    </div>
+  </ion-col>
+</ion-row>
+<ion-row>
+<ion-col col-6>
+  <div class="dropdown" >
+  <button ion-button  round color="back" class="dropbtn"><pre>Class 3 <ion-icon name="arrow-dropdown-circle"></ion-icon></pre></button>
+  <ion-list class="dropdown-content" >
+    <ion-item *ngFor="let sub of sub3" (click)="subjects(sub.subject_id,sub.subject_name,sub.class_name)">
+  {{sub.subject_name}}
+    </ion-item>
+  </ion-list>
+</div>
+</ion-col>
+
+  <ion-col col-6>
+    <div class="dropdown" >
+    <button ion-button  round color="back" class="dropbtn"><pre>Class 4 <ion-icon name="arrow-dropdown-circle"></ion-icon></pre></button>
+    <ion-list class="dropdown-content" >
+      <ion-item *ngFor="let sub of sub4" (click)="subjects(sub.subject_id,sub.subject_name,sub.class_name)">
+    {{sub.subject_name}}
+      </ion-item>
+      </ion-list>
+  </div>
+</ion-col>
+</ion-row>
+<ion-row>
+<ion-col col-6>
+  <div class="dropdown" >
+  <button ion-button  round color="back" class="dropbtn"><pre>Class 5 <ion-icon name="arrow-dropdown-circle"></ion-icon></pre></button>
+  <ion-list class="dropdown-content" >
+    <ion-item *ngFor="let sub of sub5" (click)="subjects(sub.subject_id,sub.subject_name,sub.class_name)">
+  {{sub.subject_name}}
+    </ion-item>
+  </ion-list>
+</div>
+</ion-col>
+
+  <ion-col col-6>
+    <div class="dropdown" >
+    <button ion-button  round color="back" class="dropbtn"><pre>Class 6 <ion-icon name="arrow-dropdown-circle"></ion-icon></pre></button>
+    <ion-list class="dropdown-content" >
+      <ion-item *ngFor="let sub of sub6" (click)="subjects(sub.subject_id,sub.subject_name,sub.class_name)">
+    {{sub.subject_name}}
+      </ion-item>
+      </ion-list>
+  </div>
+</ion-col>
+</ion-row>
+
+<ion-row>
+<ion-col col-6>
+<div class="dropdown" >
+<button ion-button  round color="back" class="dropbtn"><pre>Class 7 <ion-icon name="arrow-dropdown-circle"></ion-icon></pre></button>
+<ion-list class="dropdown-content" >
+  <ion-item *ngFor="let sub of sub7" (click)="subjects(sub.subject_id,sub.subject_name,sub.class_name)">
+{{sub.subject_name}}
+  </ion-item>
+  </ion-list>
+</div>
+</ion-col>
+
+<ion-col col-6>
+  <div class="dropdown" >
+  <button ion-button  round color="back" class="dropbtn"><pre> Review <ion-icon name="arrow-dropdown-circle"></ion-icon></pre></button>
+  <ion-list class="dropdown-content" >
+    <ion-item (click)="subje('Rev34','Review','Class 3 & 4')">Class 3 $ 4 </ion-item>
+    <ion-item (click)="subje('Rev567','Review','Class 5,6 & 7')"> Class 5,6 & 7</ion-item>
+    </ion-list>
+</div>
+</ion-col>
+
+</ion-row>
+</ion-content>

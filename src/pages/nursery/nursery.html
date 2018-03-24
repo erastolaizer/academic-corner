@@ -1,0 +1,35 @@
+<!--
+  Generated template for the NurseryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title align="center">NURSERY</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col col-6>
+     <button ion-button color="back" full round (click)="onChange('number')" >NUMBER</button>
+    </ion-col>
+    <ion-col col-6>
+     <button ion-button color="back" full round (click)="onChange('alpha')" >ALPHABET</button>
+    </ion-col>
+  </ion-row><br>
+
+  <ion-list>
+  <ion-item *ngFor="let material of materials" (click)="seepdf(material.name,'nursery')">{{material.name}}
+  </ion-item>
+  </ion-list>
+  <div>
+    <ion-label color="danger"> NURSERY VIDEOS</ion-label>
+  <ion-list no-lines>
+    <ion-item *ngFor="let video of videos">
+  <a href="{{video.url}}">{{video.name}}</a>
+    </ion-item>
+  </ion-list>
+  </div>
+</ion-content>

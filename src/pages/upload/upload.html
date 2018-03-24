@@ -1,0 +1,56 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> Upload subject PDF</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="sign">
+
+  <ion-grid>
+<h3><ion-label color="secondary">Choose  and Send pdf</ion-label></h3>
+<form [formGroup]="register" (ngSubmit)="regForm()"  enctype="multipart/form-data">
+    <ion-list>
+
+        <ion-item >
+          <input  type="file" formControlName="filename" name="name" id="filename" (ionChange)="getFile()">
+        </ion-item>
+
+      <ion-item>
+      <ion-select formControlName="category" placeholder="category" cancelText="Sitisha" okText="Sawa" required>
+        <ion-option value="notes">Notes</ion-option>
+        <ion-option value="exams">Exams</ion-option>
+      </ion-select>
+      </ion-item>
+
+  <ion-item>
+  <ion-select formControlName="class_id" placeholder="Choose class"  #C (ionChange)="onChange(C.value)" cancelText="Sitisha" okText="Sawa" required>
+    <ion-option value="C1">Class 1</ion-option>
+    <ion-option value="C2">Class 2</ion-option>
+    <ion-option value="C3">Class 3</ion-option>
+    <ion-option value="C4">Class 4</ion-option>
+    <ion-option value="C5">Class 5</ion-option>
+    <ion-option value="C6">Class 6</ion-option>
+    <ion-option value="C7">Class 7</ion-option>
+    <ion-option value="F1">Form 1</ion-option>
+    <ion-option value="F2">Form 2</ion-option>
+    <ion-option value="F3">Form 3</ion-option>
+    <ion-option value="F4">Form 4</ion-option>
+    <ion-option value="F5">Form 5</ion-option>
+    <ion-option value="F6">Form 6</ion-option>
+  </ion-select>
+  </ion-item>
+
+  <ion-item>
+  <ion-select formControlName="subject_id" placeholder="Choose subject" cancelText="Sitisha" okText="Sawa" required>
+    <ion-option *ngFor="let sub of subjects" value={{sub.subject_id}}>{{sub.subject_name}}</ion-option>
+  </ion-select>
+</ion-item><br>
+    <button ion-button type="submit" block>SEND</button>
+    </ion-list>
+  </form>
+  </ion-grid>
+</ion-content>

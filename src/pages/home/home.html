@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+          <button ion-button menuToggle color="primary">
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title align="center">ACADEMIC CORNER</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <P >Welcome to <b>ACADEMIC CORNER!</b></P>
+  <p>
+    Uhakika wa ufaulu mitihani ya Taifa
+  </p>
+  <div class="button-group">
+    <ion-row>
+<ion-col>
+  <button ion-button color="blue" (click)="primary()" block>primary</button>
+</ion-col>
+<ion-col>
+  <button ion-button color="blue" (click)="Ordinary()" block>O-LEVEL</button>
+</ion-col>
+<ion-col>
+  <button ion-button color="blue" (click)="Advance()" block>A-level</button>
+</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button color="back" (click)="nursery()" full>Nursery</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="back" (click)="college()" full>College</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="back" (click)="research()" full>Research</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="primary" (click)="forum()" full>ACADEMIC FORUM</button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+<div>
+  <ion-label color="danger"> NEWS</ion-label>
+<ion-list no-lines>
+  <ion-item *ngFor="let new of news">
+<a href="{{new.url}}">{{new.name}}</a>
+  </ion-item>
+</ion-list>
+</div>
+
+</ion-content>

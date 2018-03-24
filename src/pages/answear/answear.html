@@ -1,0 +1,33 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Answer</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-label color="primary"><b><h2>{{question_tag}}</h2></b></ion-label>
+<p>{{question}}</p>
+
+<ion-label color="blue"><b><h2>Answers</h2></b></ion-label>
+  <p *ngFor="let answear of answears; let i=index">{{i+1}}.{{answear.answear}}</p><hr>
+
+<ion-label color="secondary"><b><h2>Contribute here</h2></b></ion-label>
+<form [formGroup]="answ" (ngSubmit)="answForm()">
+  <ion-list>
+      <ion-item>
+        <ion-label stacked><h2>Answer</h2> </ion-label>
+        <ion-textarea type="text" formControlName="answear" ></ion-textarea>
+      </ion-item>
+  </ion-list>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4> <button ion-button color="secondary" type="submit" [disabled]="!answ.valid">Post answer</button></ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+
+</ion-content>

@@ -1,0 +1,28 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Ask</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-label color="primary"><h3>Post Your Question</h3></ion-label>
+      <form [formGroup]="ask" (ngSubmit)="askForm()">
+        <ion-list>
+          <ion-item>
+            <ion-label stacked><h2>Question title</h2> </ion-label>
+            <ion-input type="text" formControlName="question_tag" ></ion-input>
+          </ion-item>
+
+            <ion-item>
+              <ion-label stacked><h2>Question</h2> </ion-label>
+              <ion-textarea type="text" formControlName="question" ></ion-textarea>
+            </ion-item>
+        </ion-list>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-4> <button ion-button color="secondary" type="submit" [disabled]="!ask.valid">Post Question</button></ion-col>
+              </ion-row>
+            </ion-grid>
+          </form>
+</ion-content>
